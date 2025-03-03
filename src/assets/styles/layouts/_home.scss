@@ -22,7 +22,7 @@ header *, footer *{
   margin:0 auto;
 }
 .cabecera {
-  background-image: url(../images/foto-principal.jpg);
+  background-image: url(../images/foto-principal.webp), url(../images/foto-principal.jpg);
   background-size: cover;
   background-position: center;
   height: 700px;
@@ -30,6 +30,9 @@ header *, footer *{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.cabecera__titulo {
+  font-size: 4em;
 }
 /*SECCIÓN CON LA FOTO DE LA COMIDA Y UN POCO DE SU HISTORIA*/
 .comida {
@@ -40,17 +43,21 @@ header *, footer *{
   border-radius: 0.4cm;
   padding: 15px;
   margin-top: 2cm;
+  justify-items: center;
 }
 
 .comida__foto {
-  background-image: url(../images/pulpo.jpg);
+  background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
   background-size: cover;
   border-radius: 0.4cm;
+  border: 1px solid black;
   overflow: hidden;
   width: 100%;
   height: auto;
 }
-
+.comida__titulo, .receta__titulo {
+  grid-column: span 2;
+}
 .comida__historia {
   border: 1px solid black;
   border-radius: 0.4cm;
@@ -73,9 +80,23 @@ header *, footer *{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  justify-items: center;
 }
 
-.receta__ingredientes, .receta__pasos {
+.receta__ingredientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pasos__lista {
+  border: 1px solid black;
+  border-radius: 0.4cm;
+  padding: 15px;
+}
+
+.ingredientes__lista {
+  height: fit-content;
   border: 1px solid black;
   border-radius: 0.4cm;
   padding: 15px;
@@ -84,7 +105,23 @@ header *, footer *{
 .lista__elemento, .lista__indicacion {
   border: 1px solid black;
   border-radius: 0.4cm;
+  width: fit-content;
   padding: 15px;
   margin: 10px;
   text-align: justify;
+  list-style: none;
+  display: inline-block;
+}
+.receta__pasos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.receta__gif {
+  background-image: url(../images/gif.webp), url(../images/gif.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 400px;
+  margin-top: 2cm;
 }
