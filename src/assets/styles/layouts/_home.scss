@@ -86,7 +86,6 @@ header *, footer *{
   border: 1px solid black;
   border-radius: 0.4cm;
   padding: 15px;
-  display: flex;
   text-align: justify;
 }
 /*BLOQUE DE INGREDIENTES DE LA RECETA*/
@@ -139,7 +138,9 @@ header *, footer *{
   background-image: url(../images/gif.webp), url(../images/gif.gif);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 300px;
   margin-top: 2cm;
+  border-radius: 0.4cm;
+  overflow: hidden;
 }
