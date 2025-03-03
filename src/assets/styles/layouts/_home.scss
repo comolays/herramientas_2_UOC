@@ -53,15 +53,33 @@ header *, footer *{
   border: 1px solid black;
   overflow: hidden;
   width: 100%;
-  height: auto;
+  height: 280px;
+  grid-column: 1;
+  grid-row: 2;
 }
+
+.comida__foto--bandera {
+  background-image: url(../images/bandera.png);
+  background-size: 100% 100%;
+  border-radius: 0.4cm;
+  border: 1px solid black;
+  overflow: hidden;
+  width: 400px;
+  height: 250px;
+  grid-column: 1;
+  grid-row: 3;
+}
+
 .comida__titulo, .receta__titulo {
   grid-column: span 2;
+  grid-row: 1;
 }
 .comida__historia {
   border: 1px solid black;
   border-radius: 0.4cm;
   padding: 15px;
+  grid-column: 2;
+  grid-row: 2/4;
 }
 
 .historia__texto {
