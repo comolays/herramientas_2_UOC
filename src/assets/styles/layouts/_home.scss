@@ -33,6 +33,24 @@ header *, footer *{
 }
 .cabecera__titulo {
   font-size: 4em;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width:1750px) {
+  .cabecera__titulo {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width:445px) {
+  .cabecera__titulo {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width:320px) {
+  .cabecera__titulo {
+    font-size: 2em;
+  }
 }
 /*SECCIÓN CON LA FOTO DE LA COMIDA Y UN POCO DE SU HISTORIA*/
 .comida {
@@ -45,14 +63,13 @@ header *, footer *{
   margin-top: 2cm;
   justify-items: center;
 }
-
 .comida__foto {
   background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
   background-size: cover;
   border-radius: 0.4cm;
   border: 1px solid black;
   overflow: hidden;
-  width: 100%;
+  width: 380px;
   height: 280px;
   grid-column: 1;
   grid-row: 2;
@@ -87,6 +104,38 @@ header *, footer *{
   border-radius: 0.4cm;
   padding: 15px;
   text-align: justify;
+}
+/*RESPONSIVE DE BLOQUE COMIDA*/
+@media screen and (max-width: 850px) {
+  .comida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .comida__foto {
+    background-position: center;
+    width: 60%;
+    height: 250px;
+  }
+  .comida__foto--bandera {
+    width: 50%;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .comida__foto--bandera {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .comida__foto {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .comida__foto--bandera {
+    height: 100px;
+  }
 }
 /*BLOQUE DE INGREDIENTES DE LA RECETA*/
 .receta {
@@ -143,4 +192,37 @@ header *, footer *{
   margin-top: 2cm;
   border-radius: 0.4cm;
   overflow: hidden;
+}
+/*RESPONSIVE DE BLOQUE RECETA*/
+@media screen and (max-width: 1150px) {
+  .ingredientes__lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .receta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 510px) {
+  .receta__gif {
+    width: 300px;
+  }
+
+  .receta__titulo {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 330px) {
+  .lista__elemento {
+    text-align: center;
+  }
+  .receta__gif {
+    width: 250px;
+  }
 }
