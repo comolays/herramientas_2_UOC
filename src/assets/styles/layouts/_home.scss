@@ -9,6 +9,9 @@
     &__titulo {
       grid-column: span 2;
       grid-row: 1;
+      @include borde-redondeado;
+      background-color: $fondo-titulo-seccion;
+      margin-bottom: 1.5cm;
     }
 
     &__foto {
@@ -47,6 +50,7 @@
   @include borde-redondeado;
   text-align: justify;
   background-color: $fondo-cajas-texto;
+  line-height: 1.7em;
 }
 
 /*RESPONSIVE DE BLOQUE COMIDA*/
@@ -97,9 +101,13 @@
     &__titulo {
       grid-column: span 2;
       grid-row: 1;
+      @include borde-redondeado;
+      background-color: $fondo-titulo-seccion;
+      margin-bottom: 1.5cm;
     }
 
-    &__ingredientes, &__pasos {
+    &__ingredientes,
+    &__pasos {
       @include flex;
     }
 
@@ -117,17 +125,36 @@
     }
 }
 
-.pasos__lista {
-  @include borde-redondeado;
-  background-color: $fondo-sección-texto;
+.pasos {
+  &__titulo {
+    @include borde-redondeado;
+    background-color: $fondo-subtitulo;
+  }
+
+  &__lista {
+    @include borde-redondeado;
+    background-color: $fondo-sección-texto;
+  }
+
 }
 
-.ingredientes__lista {
-  @include borde-redondeado;
-  background-color: $fondo-sección-texto;
+.ingredientes {
+  
+  &__titulo {
+    @include borde-redondeado;
+    background-color: $fondo-subtitulo;
+  }
+
+  &__lista {
+    @include borde-redondeado;
+    background-color: $fondo-sección-texto;
+  }
+
 }
+
 .lista {
-  &__elemento, &__indicacion {
+  &__elemento,
+  &__indicacion {
     @include borde-redondeado;
     width: fit-content;
     margin: 10px;
@@ -135,6 +162,14 @@
     list-style: none;
     display: inline-block;
     background-color: $fondo-cajas-texto;
+  }
+
+  &__indicacion {
+    line-height: 1.7em;
+  }
+
+  &__elemento:hover {
+    background-color: #0ce285;
   }
 }
 
@@ -155,15 +190,21 @@
 }
 
 @media screen and (max-width: 510px) {
-  .receta__gif {
+
+.receta {
+
+  &__gif {
     width: 300px;
+    height: 200px;
     box-shadow: none;
   }
 
-  .receta__titulo {
+  &__titulo {
     text-align: center;
   }
 }
+}
+
 @media screen and (max-width: 330px) {
   .lista__elemento {
     text-align: center;

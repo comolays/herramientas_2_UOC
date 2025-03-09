@@ -1,18 +1,28 @@
+nav {
+  display: flex;
+  align-items: start;
+  padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    justify-content: center;
+  }
+}
+
 .cabecera {
     background-image: url(../images/foto-principal.webp), url(../images/foto-principal.jpg);
     background-size: cover;
     background-position: center;
     height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
     justify-content: center;
-  
   
     &__titulo {
       font-size: 4em;
       display: flex;
       text-align: center;
+      font-family: $font-cabecera;
     }
   }
   @media screen and (max-width:1750px) {

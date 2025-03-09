@@ -8,11 +8,22 @@
  */
 
 @import "variables";
-@import "mixin";
-@import "../../../node_modules/animate.css/animate.css";
-
+@import "mixins";
 
 /**
+  * Dependencias de animaciones
+  */
+
+@import "../../../node_modules/animate.css/animate.css";
+@import "../../../node_modules/hover.css/css/hover.css";
+
+/**
+  * Fuentes de Google fonts
+  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+  /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below

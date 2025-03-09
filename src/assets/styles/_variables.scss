@@ -1,15 +1,14 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+$font-cabecera: 'Roboto Flex', sans-serif;
+$font-textos: "League Spartan", sans-serif;
 
 
-$fondo-web: #B3E5FC;
-$fondo-seccion: #81D4FA;
-$fondo-sección-texto: #E1F5FE;
-$fondo-cajas-texto: #A3DEF8;
+$fondo-web: #b3e5fc;
+$fondo-seccion: #81d4fa;
+$fondo-sección-texto: #e1f5fe;
+$fondo-cajas-texto: #a3def8;
+$fondo-subtitulo: #14ebd6;
+$fondo-titulo-seccion: #e7eda0;
 
 $shadow-web: 7px 9px 7px 1px rgba(0,0,0,0.73);
-

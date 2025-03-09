@@ -1,10 +1,15 @@
 footer {
     margin-top: 2cm;
-    padding-bottom: 0.5cm;
     background-color: $fondo-seccion;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     line-height: 2em;
+    padding: 35px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+    footer {
+        flex-direction: column;
+    }
 }

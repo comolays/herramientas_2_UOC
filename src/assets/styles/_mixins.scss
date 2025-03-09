@@ -1,0 +1,20 @@
+/*MIXIN*/
+@mixin grid-seccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 2cm;
+}
+  
+@mixin borde-redondeado {
+  border: 1px solid black;
+  border-radius: 0.4cm;
+  padding: 15px;
+  box-shadow: ($shadow-web);
+}
+  
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
