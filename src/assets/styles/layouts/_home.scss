@@ -1,12 +1,7 @@
 /*SECCIÓN CON LA FOTO DE LA COMIDA Y UN POCO DE SU HISTORIA*/
 .comida {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  padding: 15px;
-  margin-top: 2cm;
+  @include grid-seccion;
+  @include borde-redondeado;
   justify-items: center;
   background-color: $fondo-seccion;
 
@@ -19,20 +14,19 @@
     &__foto {
       background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
       background-size: cover;
-      border-radius: 0.4cm;
-      border: 1px solid black;
+      @include borde-redondeado;
       overflow: hidden;
       width: 380px;
       height: 280px;
       grid-column: 1;
       grid-row: 2;
+      padding: 15px;
     }
 
     &__foto--bandera {
       background-image: url(../images/bandera.png);
       background-size: 100% 100%;
-      border-radius: 0.4cm;
-      border: 1px solid black;
+      @include borde-redondeado;
       overflow: hidden;
       width: 400px;
       height: 250px;
@@ -41,19 +35,16 @@
     }
 
     &__historia {
-      border: 1px solid black;
-      border-radius: 0.4cm;
-      padding: 15px;
+      @include borde-redondeado;
       grid-column: 2;
       grid-row: 2/4;
       background-color: $fondo-sección-texto;
     }
+    
 }
 
 .historia__texto {
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  padding: 15px;
+  @include borde-redondeado;
   text-align: justify;
   background-color: $fondo-cajas-texto;
 }
@@ -61,9 +52,7 @@
 /*RESPONSIVE DE BLOQUE COMIDA*/
 @media screen and (max-width: 850px) {
   .comida {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
   
 
     &__foto {
@@ -99,30 +88,19 @@
 
 /*BLOQUE DE INGREDIENTES DE LA RECETA*/
 .receta {
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  padding: 15px;
-  margin-top: 2cm;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  @include borde-redondeado;
+  @include grid-seccion;
   justify-items: center;
+  background-color: $fondo-seccion;
+  
 
     &__titulo {
       grid-column: span 2;
       grid-row: 1;
     }
 
-    &__ingredientes {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__pasos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    &__ingredientes, &__pasos {
+      @include flex;
     }
 
     &__gif {
@@ -134,31 +112,29 @@
       margin-top: 2cm;
       border-radius: 0.4cm;
       overflow: hidden;
+      box-shadow: ($shadow-web);
+
     }
 }
 
 .pasos__lista {
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  padding: 15px;
+  @include borde-redondeado;
+  background-color: $fondo-sección-texto;
 }
 
 .ingredientes__lista {
-  height: fit-content;
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  padding: 15px;
+  @include borde-redondeado;
+  background-color: $fondo-sección-texto;
 }
 .lista {
   &__elemento, &__indicacion {
-    border: 1px solid black;
-    border-radius: 0.4cm;
+    @include borde-redondeado;
     width: fit-content;
-    padding: 15px;
     margin: 10px;
     text-align: justify;
     list-style: none;
     display: inline-block;
+    background-color: $fondo-cajas-texto;
   }
 }
 
@@ -174,15 +150,14 @@
 
 @media screen and (max-width: 850px) {
   .receta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
   }
 }
 
 @media screen and (max-width: 510px) {
   .receta__gif {
     width: 300px;
+    box-shadow: none;
   }
 
   .receta__titulo {
@@ -196,5 +171,6 @@
   .receta__gif {
     width: 250px;
     height: 200px;
+    box-shadow: none;
   }
 }
