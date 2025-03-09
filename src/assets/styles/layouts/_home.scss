@@ -23,7 +23,6 @@
       height: 280px;
       grid-column: 1;
       grid-row: 2;
-      padding: 15px;
     }
 
     &__foto--bandera {
@@ -63,11 +62,13 @@
       background-position: center;
       width: 60%;
       height: 250px;
+      margin-bottom: 1.5cm;
     }
 
     &__foto--bandera {
       width: 50%;
       height: 200px;
+      margin-bottom: 1cm;
     }
   }
 }
@@ -97,7 +98,6 @@
   justify-items: center;
   background-color: $fondo-seccion;
   
-
     &__titulo {
       grid-column: span 2;
       grid-row: 1;
@@ -186,6 +186,10 @@
 @media screen and (max-width: 850px) {
   .receta {
     @include flex;
+
+    &__gif {
+      margin-bottom: 1.5cm;
+    }
   }
 }
 
