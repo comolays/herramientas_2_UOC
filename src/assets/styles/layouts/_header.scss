@@ -1,0 +1,34 @@
+.cabecera {
+    background-image: url(../images/foto-principal.webp), url(../images/foto-principal.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  
+    &__titulo {
+      font-size: 4em;
+      display: flex;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width:1750px) {
+    .cabecera__titulo {
+      font-size: 3.5em;
+    }
+  }
+  
+  @media screen and (max-width:445px) {
+    .cabecera__titulo {
+      font-size: 2.5em;
+    }
+  }
+  
+  @media screen and (max-width:320px) {
+    .cabecera__titulo {
+      font-size: 2em;
+    }
+  }

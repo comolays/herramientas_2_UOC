@@ -1,65 +1,3 @@
-/*---------------------CÓDIGO GENERAL ESTILO-----------*/
-html, body {
-  margin: 0;
-  overflow-x: hidden;  
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  font-family: $font-family-sans-serif;
-  background-color: $fondo-web;
-}
-
-*,*:after,*:before {
-  box-sizing: border-box;
-}
-
-header *, footer * {
-  margin:0;
-  padding:0;
-  list-style:none;
-  color: white;
-}
-
-.container {
-  width:94%;
-  max-width:1200px;
-  margin:0 auto;
-}
-
-.cabecera {
-  background-image: url(../images/foto-principal.webp), url(../images/foto-principal.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-
-  &__titulo {
-    font-size: 4em;
-    display: flex;
-    text-align: center;
-  }
-}
-@media screen and (max-width:1750px) {
-  .cabecera__titulo {
-    font-size: 3.5em;
-  }
-}
-
-@media screen and (max-width:445px) {
-  .cabecera__titulo {
-    font-size: 2.5em;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .cabecera__titulo {
-    font-size: 2em;
-  }
-}
 /*SECCIÓN CON LA FOTO DE LA COMIDA Y UN POCO DE SU HISTORIA*/
 .comida {
   display: grid;
@@ -72,43 +10,44 @@ header *, footer * {
   justify-items: center;
   background-color: $fondo-seccion;
 
-  &__foto {
-    background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
-    background-size: cover;
-    border-radius: 0.4cm;
-    border: 1px solid black;
-    overflow: hidden;
-    width: 380px;
-    height: 280px;
-    grid-column: 1;
-    grid-row: 2;
-  }
+  
+    &__titulo {
+      grid-column: span 2;
+      grid-row: 1;
+    }
 
-  &__foto--bandera {
-    background-image: url(../images/bandera.png);
-    background-size: 100% 100%;
-    border-radius: 0.4cm;
-    border: 1px solid black;
-    overflow: hidden;
-    width: 400px;
-    height: 250px;
-    grid-column: 1;
-    grid-row: 3;
-  }
+    &__foto {
+      background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
+      background-size: cover;
+      border-radius: 0.4cm;
+      border: 1px solid black;
+      overflow: hidden;
+      width: 380px;
+      height: 280px;
+      grid-column: 1;
+      grid-row: 2;
+    }
 
-  &__historia {
-    border: 1px solid black;
-    border-radius: 0.4cm;
-    padding: 15px;
-    grid-column: 2;
-    grid-row: 2/4;
-    background-color: $fondo-sección-texto;
-  }
-}
+    &__foto--bandera {
+      background-image: url(../images/bandera.png);
+      background-size: 100% 100%;
+      border-radius: 0.4cm;
+      border: 1px solid black;
+      overflow: hidden;
+      width: 400px;
+      height: 250px;
+      grid-column: 1;
+      grid-row: 3;
+    }
 
-.comida__titulo, .receta__titulo {
-  grid-column: span 2;
-  grid-row: 1;
+    &__historia {
+      border: 1px solid black;
+      border-radius: 0.4cm;
+      padding: 15px;
+      grid-column: 2;
+      grid-row: 2/4;
+      background-color: $fondo-sección-texto;
+    }
 }
 
 .historia__texto {
@@ -169,28 +108,33 @@ header *, footer * {
   gap: 30px;
   justify-items: center;
 
-  &__ingredientes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    &__titulo {
+      grid-column: span 2;
+      grid-row: 1;
+    }
 
-  &__pasos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  &__gif {
-    background-image: url(../images/gif.webp), url(../images/gif.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 450px;
-    height: 300px;
-    margin-top: 2cm;
-    border-radius: 0.4cm;
-    overflow: hidden;
-  }
+    &__ingredientes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__pasos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__gif {
+      background-image: url(../images/gif.webp), url(../images/gif.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 450px;
+      height: 300px;
+      margin-top: 2cm;
+      border-radius: 0.4cm;
+      overflow: hidden;
+    }
 }
 
 .pasos__lista {
@@ -205,16 +149,17 @@ header *, footer * {
   border-radius: 0.4cm;
   padding: 15px;
 }
-
-.lista__elemento, .lista__indicacion {
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  width: fit-content;
-  padding: 15px;
-  margin: 10px;
-  text-align: justify;
-  list-style: none;
-  display: inline-block;
+.lista {
+  &__elemento, &__indicacion {
+    border: 1px solid black;
+    border-radius: 0.4cm;
+    width: fit-content;
+    padding: 15px;
+    margin: 10px;
+    text-align: justify;
+    list-style: none;
+    display: inline-block;
+  }
 }
 
 /*RESPONSIVE DE BLOQUE RECETA*/
