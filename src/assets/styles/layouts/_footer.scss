@@ -6,10 +6,10 @@ footer {
     line-height: 2em;
     padding: 35px;
     align-items: center;
-}
 
-@media screen and (max-width: 1400px) {
-    footer {
-        flex-direction: column;
+    @media screen and (max-width: 1400px) {
+        & {
+            flex-direction: column;
+        }
     }
 }

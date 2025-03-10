@@ -23,17 +23,17 @@
       height: 280px;
       grid-column: 1;
       grid-row: 2;
-    }
 
-    &__foto--bandera {
-      background-image: url(../images/bandera.png);
-      background-size: 100% 100%;
-      @include borde-redondeado;
-      overflow: hidden;
-      width: 400px;
-      height: 250px;
-      grid-column: 1;
-      grid-row: 3;
+      &--bandera {
+        background-image: url(../images/bandera.png);
+        background-size: 100% 100%;
+        @include borde-redondeado;
+        overflow: hidden;
+        width: 400px;
+        height: 250px;
+        grid-column: 1;
+        grid-row: 3;
+      }
     }
 
     &__historia {
@@ -42,52 +42,56 @@
       grid-row: 2/4;
       background-color: $fondo-sección-texto;
     }
+
+    @media screen and (max-width: 850px) {
+      & {
+      @include flex;
+      }
+
+      &__foto {
+        background-position: center;
+        width: 60%;
+        height: 250px;
+        margin-bottom: 1.5cm;
     
-}
-
-.historia__texto {
-  @include borde-redondeado;
-  text-align: justify;
-  background-color: $fondo-cajas-texto;
-  line-height: 1.7em;
-}
-
-/*RESPONSIVE DE BLOQUE COMIDA*/
-@media screen and (max-width: 850px) {
-  .comida {
-    @include flex;
-  
-
-    &__foto {
-      background-position: center;
-      width: 60%;
-      height: 250px;
-      margin-bottom: 1.5cm;
+        &--bandera {
+          width: 50%;
+          height: 200px;
+          margin-bottom: 1cm;
+        }
+      }
     }
 
-    &__foto--bandera {
-      width: 50%;
-      height: 200px;
-      margin-bottom: 1cm;
+    @media screen and (max-width: 600px) {
+      &__foto {
+        &--bandera {
+          height: 140px;
+        }
+      }
     }
-  }
+    
+    @media screen and (max-width: 450px) {
+      &__foto {
+        height: 150px;
+      }
+    }
+    
+    @media screen and (max-width: 400px) {
+      &__foto{
+        
+        &--bandera {
+         height: 100px;
+        }
+      }
+    }
 }
 
-@media screen and (max-width: 600px) {
-  .comida__foto--bandera {
-    height: 140px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .comida__foto {
-    height: 150px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .comida__foto--bandera {
-    height: 100px;
+.historia {
+  &__texto {
+    @include borde-redondeado;
+    text-align: justify;
+    background-color: $fondo-cajas-texto;
+    line-height: 1.7em;
   }
 }
 
@@ -120,10 +124,38 @@
       margin-top: 2cm;
       border-radius: 0.4cm;
       overflow: hidden;
-      box-shadow: ($shadow-web);
-
+      box-shadow: $shadow-web;
     }
-}
+
+    @media screen and (max-width: 850px) {
+      @include flex;
+      &__gif {
+        margin-bottom: 1.5cm;
+      }
+    }
+
+    @media screen and (max-width: 510px) {
+      
+      &__gif {
+        width: 300px;
+        height: 200px;
+        box-shadow: none;
+      }
+    
+      &__titulo {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 330px){
+      &__gif {
+        width: 250px;
+        height: 200px;
+        box-shadow: none;
+      }
+    }
+ }
+
 
 .pasos {
   &__titulo {
@@ -150,9 +182,18 @@
     background-color: $fondo-sección-texto;
   }
 
+  @media screen and (max-width: 1150px) {
+    &__lista {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+  }
 }
 
 .lista {
+
   &__elemento,
   &__indicacion {
     @include borde-redondeado;
@@ -171,51 +212,10 @@
   &__elemento:hover {
     background-color: #0ce285;
   }
-}
 
-/*RESPONSIVE DE BLOQUE RECETA*/
-@media screen and (max-width: 1150px) {
-  .ingredientes__lista {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .receta {
-    @include flex;
-
-    &__gif {
-      margin-bottom: 1.5cm;
+  @media screen and (max-width: 330px) {
+    &__elemento {
+      text-align: center;
     }
-  }
-}
-
-@media screen and (max-width: 510px) {
-
-.receta {
-
-  &__gif {
-    width: 300px;
-    height: 200px;
-    box-shadow: none;
-  }
-
-  &__titulo {
-    text-align: center;
-  }
-}
-}
-
-@media screen and (max-width: 330px) {
-  .lista__elemento {
-    text-align: center;
-  }
-  .receta__gif {
-    width: 250px;
-    height: 200px;
-    box-shadow: none;
   }
 }
