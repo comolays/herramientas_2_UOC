@@ -11,13 +11,19 @@ nav {
 }
 
 .cabecera {
-    background-image: url(../images/foto-principal.webp), url(../images/foto-principal.jpg);
+    background-image: url(../images/foto-principal.jpg);
     background-size: cover;
     background-position: center;
     height: 700px;
     @include flex;
     justify-content: center;
-  
+ 
+    @supports (background-image: url('image.webp')) {
+      & {
+        background-image: url(../images/foto-principal.webp);
+      }
+    }
+
     &__titulo {
       font-size: 4em;
       display: flex;

@@ -15,7 +15,7 @@
     }
 
     &__foto {
-      background-image: url(../images/pulpo.webp), url(../images/pulpo.jpg);
+      background-image: url(../images/pulpo.jpg);
       background-size: cover;
       @include borde-redondeado;
       overflow: hidden;
@@ -23,6 +23,12 @@
       height: 280px;
       grid-column: 1;
       grid-row: 2;
+
+      @supports (background-image: url('image.webp')) {
+        & {
+          background-image: url(../images/pulpo.webp);
+        }
+      }
 
       &--bandera {
         background-image: url(../images/bandera.png);
@@ -33,6 +39,11 @@
         height: 250px;
         grid-column: 1;
         grid-row: 3;
+      }
+      @supports (background-image: url('image.webp')) {
+        &--bandera {
+          background-image: url(../images/bandera.webp);
+        }
       }
     }
 
@@ -125,6 +136,12 @@
       border-radius: 0.4cm;
       overflow: hidden;
       box-shadow: $shadow-web;
+
+      @supports (background-image: url('image.webp')) {
+        & {
+          background-image: url(../images/gif.webp);
+        }
+      }  
     }
 
     @media screen and (max-width: 850px) {
