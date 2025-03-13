@@ -212,12 +212,25 @@
     margin: 10px;
     text-align: justify;
     list-style: none;
-    display: inline-block;
     background-color: $fondo-cajas-texto;
   }
 
   &__indicacion {
     line-height: 1.7em;
+  }
+
+  &__indicacion::before {
+    content: counter(list-item);
+    background-color: $fondo-titulo-seccion;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
   }
 
   &__elemento:hover {
