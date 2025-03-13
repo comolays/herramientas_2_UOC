@@ -7,11 +7,8 @@
 
   
     &__titulo {
-      grid-column: span 2;
-      grid-row: 1;
       @include borde-redondeado;
-      background-color: $fondo-titulo-seccion;
-      margin-bottom: 1.5cm;
+      @include titulos-seccion;
     }
 
     &__foto {
@@ -114,11 +111,8 @@
   background-color: $fondo-seccion;
   
     &__titulo {
-      grid-column: span 2;
-      grid-row: 1;
       @include borde-redondeado;
-      background-color: $fondo-titulo-seccion;
-      margin-bottom: 1.5cm;
+      @include titulos-seccion;
     }
 
     &__ingredientes,
