@@ -9,6 +9,52 @@
     &__titulo {
       @include borde-redondeado;
       @include titulos-seccion;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        background-image: url(../images/historia.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    @media screen and (max-width: 455px) {
+      &__titulo {
+        font-size: 1.2em;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 455px) {
+      &__titulo {
+        font-size: 1em;
+      }
+    }
+    }
+
+    @media screen and (max-width: 455px) {
+      &__titulo {
+        font-size: 1.2em;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 370px) {
+      &__titulo {
+        font-size: 1em;
+        text-align: center;
+      }
     }
 
     &__foto {
@@ -113,6 +159,35 @@
     &__titulo {
       @include borde-redondeado;
       @include titulos-seccion;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        background-image: url(../images/cocinar.png);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+    @media screen and (max-width: 455px) {
+      &__titulo {
+        font-size: 1.2em;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 370px) {
+      &__titulo {
+        font-size: 1em;
+      }
     }
 
     &__ingredientes,
@@ -241,5 +316,12 @@
     &__elemento {
       text-align: center;
     }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .receta__titulo::before,
+  .comida__titulo::before {
+    display: none;
   }
 }
