@@ -21,6 +21,11 @@
         display: inline-block;
         margin-right: 10px;
       }
+    @supports (background-image: url('image.webp')) {
+      &::before {
+        background-image: url(../images/historia.webp);
+      }
+    }
     @media screen and (max-width: 455px) {
       &__titulo {
         font-size: 1.2em;
@@ -171,7 +176,13 @@
         display: inline-block;
         margin-right: 10px;
       }
+      @supports (background-image: url('image.webp')) {
+        &::before {
+          background-image: url(../images/cocinar.webp);
+        }
+      }
     }
+
 
     @media screen and (max-width: 455px) {
       &__titulo {
@@ -249,6 +260,12 @@
     background-color: $fondo-subtitulo;
   }
 
+  @media screen and (max-width: 447px){
+    &__titulo {
+      font-size: 1em;
+    }
+  }
+
   &__lista {
     @include borde-redondeado;
     background-color: $fondo-sección-texto;
@@ -261,6 +278,12 @@
   &__titulo {
     @include borde-redondeado;
     background-color: $fondo-subtitulo;
+  }
+
+  @media screen and (max-width: 447px){
+    &__titulo {
+      font-size: 1em;
+    }
   }
 
   &__lista {

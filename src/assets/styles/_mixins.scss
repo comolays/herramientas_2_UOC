@@ -19,10 +19,18 @@
   align-items: center;
 }
 
-@mixin titulos-seccion{
+@mixin titulos-seccion {
   grid-column: span 2;
   grid-row: 1;
   background-color: $fondo-titulo-seccion;
   margin-bottom: 1.5cm;
   color: white;
+}
+
+@mixin size-h2 {
+  font-size: 1.8em;
+}
+
+@mixin size-h3 {
+  font-size: 1.4em;
 }

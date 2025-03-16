@@ -1,9 +1,10 @@
 @use "sass:color";
 
+//Fonts
 $font-cabecera: 'Roboto Flex', sans-serif;
 $font-textos: "League Spartan", sans-serif;
 
-
+//Colors
 $fondo-web: #b3e5fc;
 $fondo-seccion: #81d4fa;
 $fondo-sección-texto: #e1f5fe;
@@ -11,4 +12,5 @@ $fondo-cajas-texto: #a3def8;
 $fondo-subtitulo: #14ebd6;
 $fondo-titulo-seccion: #706f7d;
 
+//Shadow
 $shadow-web: 7px 9px 7px 1px rgba(0,0,0,0.73);
