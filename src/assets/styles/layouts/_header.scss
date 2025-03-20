@@ -30,6 +30,7 @@ nav {
       display: flex;
       text-align: center;
       font-size: 4em;
+    }
     
     @media screen and (max-width:1750px) {
       &__titulo {
@@ -49,5 +50,5 @@ nav {
       }
     }
   }
-}
+
 
