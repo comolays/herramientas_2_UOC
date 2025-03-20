@@ -13,25 +13,24 @@ nav {
 }
 
 .cabecera {
-    background-image: url(../images/foto-principal.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    @include flex;
-    justify-content: center;
- 
-    @supports (background-image: url('image.webp')) {
-      & {
-        background-image: url(../images/foto-principal.webp);
-      }
-    }
+  @include flex;
+  justify-content: center;  
+  background-image: url(../images/foto-principal.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
 
+  @supports (background-image: url('image.webp')) {
+    & {
+      background-image: url(../images/foto-principal.webp);
+    }
+  }
+  
     &__titulo {
-      font-size: 4em;
       display: flex;
       text-align: center;
-    }
-
+      font-size: 4em;
+    
     @media screen and (max-width:1750px) {
       &__titulo {
         font-size: 3.5em;
@@ -49,4 +48,6 @@ nav {
         font-size: 2em;
       }
     }
+  }
 }
+

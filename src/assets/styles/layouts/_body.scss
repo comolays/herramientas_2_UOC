@@ -2,33 +2,35 @@
 .comida {
   @include grid-seccion;
   @include borde-redondeado;
-  justify-items: center;
   background-color: $fondo-seccion;
 
-  
     &__titulo {
-      @include borde-redondeado;
-      @include titulos-seccion;
       display: flex;
       align-items: center;
+      text-align: center;
+      line-height: 1.5em;
+      @include borde-redondeado;
+      @include titulos-seccion;
 
       &::before {
         content: '';
+        display: inline-block;
         background-image: url(../images/historia.png);
+        background-size: cover;
         width: 50px;
         height: 50px;
-        background-size: cover;
-        display: inline-block;
         margin-right: 10px;
       }
+
     @supports (background-image: url('image.webp')) {
       &::before {
         background-image: url(../images/historia.webp);
       }
     }
+
     @media screen and (max-width: 455px) {
       &__titulo {
-        font-size: 1.2em;
+        font-size: 1.4em;
 
         &::before {
           width: 30px;
@@ -36,41 +38,17 @@
         }
       }
     }
-
-    @media screen and (max-width: 455px) {
-      &__titulo {
-        font-size: 1em;
-      }
-    }
-    }
-
-    @media screen and (max-width: 455px) {
-      &__titulo {
-        font-size: 1.2em;
-
-        &::before {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-
-    @media screen and (max-width: 370px) {
-      &__titulo {
-        font-size: 1em;
-        text-align: center;
-      }
-    }
+  }
 
     &__foto {
       background-image: url(../images/pulpo.jpg);
+      grid-column: 1;
+      grid-row: 2;
       background-size: cover;
-      @include borde-redondeado;
       overflow: hidden;
       width: 380px;
       height: 280px;
-      grid-column: 1;
-      grid-row: 2;
+      @include borde-redondeado;
 
       @supports (background-image: url('image.webp')) {
         & {
@@ -80,14 +58,15 @@
 
       &--bandera {
         background-image: url(../images/bandera.png);
+        grid-column: 1;
+        grid-row: 3;
         background-size: 100% 100%;
-        @include borde-redondeado;
         overflow: hidden;
         width: 400px;
         height: 250px;
-        grid-column: 1;
-        grid-row: 3;
+        @include borde-redondeado;
       }
+
       @supports (background-image: url('image.webp')) {
         &--bandera {
           background-image: url(../images/bandera.webp);
@@ -96,9 +75,9 @@
     }
 
     &__historia {
-      @include borde-redondeado;
       grid-column: 2;
       grid-row: 2/4;
+      @include borde-redondeado;
       background-color: $fondo-sección-texto;
     }
 
@@ -149,8 +128,8 @@
   &__texto {
     @include borde-redondeado;
     text-align: justify;
-    background-color: $fondo-cajas-texto;
     line-height: 1.7em;
+    background-color: $fondo-cajas-texto;
   }
 }
 
@@ -159,21 +138,23 @@
   @include borde-redondeado;
   @include grid-seccion;
   justify-items: center;
+  text-align: center;
+  line-height: 1.5em;
   background-color: $fondo-seccion;
   
     &__titulo {
-      @include borde-redondeado;
-      @include titulos-seccion;
       display: flex;
       align-items: center;
+      @include titulos-seccion;
+      @include borde-redondeado;
 
       &::before {
         content: '';
+        display: inline-block;
         background-image: url(../images/cocinar.png);
         width: 50px;
         height: 50px;
         background-size: cover;
-        display: inline-block;
         margin-right: 10px;
       }
       @supports (background-image: url('image.webp')) {
@@ -186,18 +167,12 @@
 
     @media screen and (max-width: 455px) {
       &__titulo {
-        font-size: 1.2em;
+        font-size: 1.4em;
 
         &::before {
           width: 30px;
           height: 30px;
         }
-      }
-    }
-
-    @media screen and (max-width: 370px) {
-      &__titulo {
-        font-size: 1em;
       }
     }
 
@@ -213,8 +188,8 @@
       width: 450px;
       height: 300px;
       margin-top: 2cm;
-      border-radius: 0.4cm;
       overflow: hidden;
+      border-radius: 0.4cm;
       box-shadow: $shadow-web;
 
       @supports (background-image: url('image.webp')) {
@@ -232,7 +207,6 @@
     }
 
     @media screen and (max-width: 510px) {
-      
       &__gif {
         width: 300px;
         height: 200px;
@@ -244,7 +218,7 @@
       }
     }
 
-    @media screen and (max-width: 330px){
+    @media screen and (max-width: 330px) {
       &__gif {
         width: 250px;
         height: 200px;
@@ -260,9 +234,9 @@
     background-color: $fondo-subtitulo;
   }
 
-  @media screen and (max-width: 447px){
+  @media screen and (max-width: 447px) {
     &__titulo {
-      font-size: 1em;
+      font-size: 1.3em;
     }
   }
 
@@ -274,15 +248,14 @@
 }
 
 .ingredientes {
-  
   &__titulo {
     @include borde-redondeado;
     background-color: $fondo-subtitulo;
   }
 
-  @media screen and (max-width: 447px){
+  @media screen and (max-width: 447px) {
     &__titulo {
-      font-size: 1em;
+      font-size: 1.3em;
     }
   }
 
@@ -301,15 +274,21 @@
   }
 }
 
-.lista {
+@media screen and (max-width: 380px) {
+  .receta__titulo::before,
+  .comida__titulo::before {
+    display: none;
+  }
+}
 
+.lista {
   &__elemento,
   &__indicacion {
-    @include borde-redondeado;
+    text-align: justify;
     width: fit-content;
     margin: 10px;
-    text-align: justify;
     list-style: none;
+    @include borde-redondeado;
     background-color: $fondo-cajas-texto;
   }
 
@@ -319,16 +298,16 @@
 
   &__indicacion::before {
     content: counter(list-item);
-    background-color: $fondo-titulo-seccion;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: $fondo-titulo-seccion;
   }
 
   &__elemento:hover {
@@ -339,12 +318,5 @@
     &__elemento {
       text-align: center;
     }
-  }
-}
-
-@media screen and (max-width: 325px) {
-  .receta__titulo::before,
-  .comida__titulo::before {
-    display: none;
   }
 }

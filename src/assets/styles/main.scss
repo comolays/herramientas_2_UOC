@@ -7,8 +7,9 @@
  * Import variables
  */
 
-@import "variables";
-@import "mixins";
+@import "base/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
 
 /**
   * Dependencias de animaciones
@@ -37,8 +38,8 @@
  * It's a best practice to use a different partial for each page
  */
 @import "base/base";
-@import "base/tipografy";
-@import "layouts/home";
+@import "base/typografy";
+@import "layouts/body";
 @import "layouts/header";
 @import "layouts/footer";
 @import "state/hover";
