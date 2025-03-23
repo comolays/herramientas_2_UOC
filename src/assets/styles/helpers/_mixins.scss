@@ -1,4 +1,4 @@
-/*MIXIN*/
+//Grid style layout mixin
 @mixin grid-seccion {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6,20 +6,23 @@
   margin-top: 2cm;
   justify-items: center;
 }
-  
-@mixin borde-redondeado {
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 0.4cm;
-  box-shadow: $shadow-web;
-}
-  
+
+//Flex style layout mixin
 @mixin flex {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+//Sections and boxes border style
+@mixin borde-redondeado {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 0.4cm;
+  box-shadow: $shadow-web;
+}
+
+//Section title styles
 @mixin titulos-seccion {
   grid-column: span 2;
   grid-row: 1;
@@ -28,6 +31,7 @@
   color: white;
 }
 
+//Sections title Font-size
 @mixin size-h2 {
   font-size: 1.8em;
 }

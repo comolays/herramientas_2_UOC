@@ -254,6 +254,15 @@
     background-color: $fondo-subtitulo;
   }
 
+  @media screen and (max-width: 1150px) {
+    &__lista {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+
   @media screen and (max-width: 447px) {
     &__titulo {
       font-size: 1.3em;
@@ -263,15 +272,6 @@
   &__lista {
     @include borde-redondeado;
     background-color: $fondo-sección-texto;
-  }
-
-  @media screen and (max-width: 1150px) {
-    &__lista {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      text-align: center;
-    }
   }
 }
 

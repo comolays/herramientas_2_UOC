@@ -1,14 +1,17 @@
+//General font-family and size
 * {
   font-family: $font-textos;
   font-size: 16px;
 }
 
+//Cabecera font-family
 .cabecera {
   &__titulo {
     font-family: $font-cabecera;
   }
 }
 
+//Sections titles
 .comida,
 .receta {
   &__titulo {
