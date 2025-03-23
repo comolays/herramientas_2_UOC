@@ -1,5 +1,6 @@
 /*---------------------CÓDIGO GENERAL ESTILO-----------*/
-html, body {
+html,
+body {
   margin: 0;
   overflow-x: hidden;  
   width: 100%;
@@ -8,11 +9,14 @@ html, body {
   background-color: $fondo-web;
 }
 
-*,*:after,*:before {
+*,
+*:after,
+*:before {
   box-sizing: border-box;
 }
 
-header *, footer * {
+header *,
+footer * {
   margin: 0;
   padding: 0;
   list-style: none;
