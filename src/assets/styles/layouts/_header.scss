@@ -1,3 +1,4 @@
+//Nav with the logo
 nav {
   display: flex;
   padding: 15px;
@@ -11,6 +12,7 @@ nav {
   }
 }
 
+//Main section in the top with the main big photo and text above it
 .cabecera {
   @include flex;
   justify-content: center;  
@@ -49,5 +51,3 @@ nav {
       }
     }
   }
-
-
